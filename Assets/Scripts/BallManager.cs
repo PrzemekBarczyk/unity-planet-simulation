@@ -18,7 +18,7 @@ public class BallManager : MonoBehaviour
     public void DeleteBall(Ball ball)
 	{
         balls.Remove(ball);
-        Destroy(ball);
+        Destroy(ball.gameObject);
         OnBallDestroyed.Invoke();
 	}
 
