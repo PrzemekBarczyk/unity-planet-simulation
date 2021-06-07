@@ -38,4 +38,9 @@ public class BallSpawner : MonoBehaviour
 	{
         return Quaternion.Euler(new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f)));
 	}
+
+    public Ball GetBallPrefab()
+	{
+        return ballPrefab;
+	}
 }
