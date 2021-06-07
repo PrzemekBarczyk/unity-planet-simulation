@@ -9,8 +9,13 @@ public class BallSpawner : MonoBehaviour
     [SerializeField] float minDistance = 5f;
     [SerializeField] float maxDistance = 50f;
 
+    BallManager ballManager;
+    Transform ballsParent;
+
     void Start()
     {
+        ballManager = GameObject.Find("Ball Manager").GetComponent<BallManager>();
+        ballsParent = GameObject.Find("Balls").transform;
         StartCoroutine(SpawnBall());
     }
 
@@ -19,7 +24,8 @@ public class BallSpawner : MonoBehaviour
         while (true)
 		{
             yield return new WaitForSeconds(0.25f);
-            Instantiate(ballPrefab, RandomPosition(), RandomRotation());
+            var newBall = Instantiate(ballPrefab, RandomPosition(), RandomRotation(), ballsParent);
+            ballManager.AddBall(newBall);
         }
 	}
 
