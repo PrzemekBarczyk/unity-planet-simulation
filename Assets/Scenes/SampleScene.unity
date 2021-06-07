@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b205c8d10b658984e81556059a908db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballPrefab: {fileID: 6935162541860008555, guid: 67b37804f3ca6904e8470ee462d19558, type: 3}
+  ballPrefab: {fileID: -3124716912785522964, guid: 67b37804f3ca6904e8470ee462d19558, type: 3}
   minDistance: 5
   maxDistance: 50
 --- !u!4 &447300841

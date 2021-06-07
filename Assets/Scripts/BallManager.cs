@@ -7,30 +7,23 @@ public class BallManager : MonoBehaviour
     [SerializeField] UnityEvent OnBallCreated;
     [SerializeField] UnityEvent OnBallDestroyed;
 
-    List<GameObject> balls = new List<GameObject>();
+    List<Ball> balls = new List<Ball>();
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void AddBall(GameObject newBall)
+    public void AddBall(Ball newBall)
 	{
         balls.Add(newBall);
         OnBallCreated.Invoke();
 	}
 
-    public void DeleteBall(GameObject ball)
+    public void DeleteBall(Ball ball)
 	{
         balls.Remove(ball);
         Destroy(ball);
         OnBallDestroyed.Invoke();
+	}
+
+    public List<Ball> GetBalls()
+	{
+        return balls;
 	}
 }

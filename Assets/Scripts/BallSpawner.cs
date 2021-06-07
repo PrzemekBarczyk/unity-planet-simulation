@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class BallSpawner : MonoBehaviour
 {
-    [SerializeField] GameObject ballPrefab;
+    [SerializeField] Ball ballPrefab;
 
     [Header("Spawn distance")]
     [SerializeField] float minDistance = 5f;
