@@ -46,11 +46,11 @@ public class Ball : MonoBehaviour
         if (reverseGravity)
             direction *= -1;
 
-        float distance = direction.magnitude;
-        if (distance == 0f)
+        float distanceSqr = direction.sqrMagnitude;
+        if (distanceSqr == 0f)
             return;
 
-        Vector3 force = (myRigidbody.mass * ball.GetRigidbody().mass) / Mathf.Pow(distance, 2f) * G * direction.normalized;
+        Vector3 force = (myRigidbody.mass * ball.GetRigidbody().mass) / distanceSqr * G * direction.normalized;
 
         myRigidbody.AddForce(force);
 	}
@@ -67,7 +67,7 @@ public class Ball : MonoBehaviour
 
     void Merge(Ball otherBall)
 	{
-        // select bigger or first (if equal) object from colliding pair
+        // select bigger or first (if equal) object from colliding pair by disabling other
         if (transform.localScale.x >= otherBall.transform.localScale.x && enabled)
             otherBall.enabled = false;
         else 
