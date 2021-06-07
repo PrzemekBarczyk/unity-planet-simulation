@@ -11,6 +11,7 @@ public class Ball : MonoBehaviour
     public const float G = 6.67259f;
 
     bool attract = true;
+    bool reverseGravity;
 
     BallManager ballManager;
     BallSpawner ballSpawner;
@@ -42,6 +43,9 @@ public class Ball : MonoBehaviour
 	public void CalculateAttraction(Ball ball)
 	{
         Vector3 direction = ball.GetRigidbody().position - myRigidbody.position;
+        if (reverseGravity)
+            direction *= -1;
+
         float distance = direction.magnitude;
         if (distance == 0f)
             return;
@@ -123,5 +127,10 @@ public class Ball : MonoBehaviour
 
         myCollider.enabled = true;
         attract = true;
+	}
+
+    public void ReverseGravity(bool reverse)
+	{
+        reverseGravity = reverse;
 	}
 }
