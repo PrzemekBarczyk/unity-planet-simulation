@@ -307,8 +307,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballPrefab: {fileID: -3124716912785522964, guid: 67b37804f3ca6904e8470ee462d19558, type: 3}
-  minDistance: 5
-  maxDistance: 50
+  minDistance: 10
+  maxDistance: 150
 --- !u!4 &447300841
 Transform:
   m_ObjectHideFlags: 0

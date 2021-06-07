@@ -6,8 +6,8 @@ public class BallSpawner : MonoBehaviour
     [SerializeField] Ball ballPrefab;
 
     [Header("Spawn distance")]
-    [SerializeField] float minDistance = 5f;
-    [SerializeField] float maxDistance = 50f;
+    [SerializeField] float minDistance = 10f;
+    [SerializeField] float maxDistance = 150f;
 
     IEnumerator co;
 

@@ -125,5 +125,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a55212afea17874fb54db55981256f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionMinForce: 10
-  explosionMaxForce: 15
+  explosionMinForce: 30
+  explosionMaxForce: 50

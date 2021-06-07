@@ -5,8 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Ball : MonoBehaviour
 {
-    [SerializeField] float explosionMinForce = 10f;
-    [SerializeField] float explosionMaxForce = 15f;
+    [SerializeField] float explosionMinForce = 30f;
+    [SerializeField] float explosionMaxForce = 50f;
 
     public const float G = 6.67259f;
 
